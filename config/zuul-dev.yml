@@ -15,7 +15,6 @@ eureka:
 
 zuul:
   retryable: true
-  sensitive-headers: Cookie, Set-Cookie, Authorization
     
 ribbon:
   ConnectTimeout: 1000
@@ -30,10 +29,10 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 500
-            
+   
 management:
   endpoints:
     web:
       exposure:
         include: hystrix.stream
-
+   
